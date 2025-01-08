@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!--MainFont-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<!--Tile h2 Font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+<!--DateFont-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
+<!--GreetFont-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<!--CountDownFont-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<!--Tile p Font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<!--WatarmarkFont-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&display=swap" rel="stylesheet">
+<title>Countdown↴ Clock</title>
+</head>
+<body>
+  <button id="cogsButton" class="fas fa-gear"></button>
+  <div class="controls-overlay" id="controlsOverlay"></div>
+  <div class="controls-popup" id="controlsPopup">
+  <div class="controls" id="controls">
+    <!-- Color Picker Section -->
+    <div class="control-section">
+      <label for="colorPicker" class="control-label">
+        <i class="fas fa-fill-drip color-icon"></i>
+        <span>Pick a Color>>></span>
+      </label>
+      <input type="color" id="colorPicker" title="Pick a color for the clock" />
+    </div>
+    <!-- Font Size Range Section -->
+    <div class="control-section">
+      <label for="fontSizeRange" class="control-label">
+        <i class="fas fa-text-height size-icon"></i>
+        <span>Re-size Font</span>
+      </label>
+      <input type="range" id="fontSizeRange" min="15" max="20" step="1" value="10" />
+    </div>
+     <!-- Background Upload Section -->
+<div class="control-section">
+  <label for="bgUpload" class="upload-btn">
+    <i class="fas fa-upload upload-icon"></i>
+    <span>Upload BG Image</span>
+  </label>
+  <input type="file" id="bgUpload" accept="image/*" style="display: none;" />
+</div>
+
+    <!-- Remove Background Button Section -->
+    <div class="control-section">
+      <button id="removeBgBtn">
+        <i class="fas fa-trash-alt remove-icon"></i>
+        <span>Remove BG Image</span>
+      </button>
+    </div>
+    <!--Check Button 4 Comf Section -->
+    <div class="control-section">
+      <button class="check-btn" id="checkBtn">
+        <i class="fa-solid fa-circle-check check-icon"></i>
+        <span>All Done</span>
+      </button>
+    </div>
+  </div>
+</div>
+  <div class="clock-container">
+    <div style="height: 50px;"></div>
+    <div id="greeting"></div>
+    <div style="height: 5px;"></div>
+    <div id="clock"></div>
+    <div style="height: 5px;"></div>
+    <div id="date"></div>
+    <div style="height: 100px;"></div>
+    <i class="fas fa-chevron-down scroll-icon"></i>
+  </div>
+
+
+  <body class="dark">
+<label class="ui-switch">
+  <input type="checkbox" id="theme-toggle" checked>
+  <div class="slider">
+    <div class="circle"></div>
+  </div>
+</label>
+
+<div class="sort-container">
+  <select id="sort-select" class="sort-select">
+    <option value="asc">Sort by Date (Ascending)</option>
+    <option value="desc">Sort by Date (Descending)</option>
+  </select>
+</div>
+
+<div class="container" id="container">
+  <div class="container" id="container">
+    <div class="tile dark" id="MedicalAdmission25" data-date="2025-01-17T11:00:00">
+      <h2>Medical Admission Exam!</h2>
+      <p><strong>Date:</strong> 17 January 2025</p>
+      <p><strong>Time:</strong> 11:00 AM</p>
+      <p><strong>Center:</strong> 35-Rajshahi Medical College</p>
+      <div class="countdown dark" id="countdown1"></div>
+      <button class="download-btn" onclick="downloadTile('Medical_Admission25')"><i class="fas fa-download"></i></button>
+    </div>
+
+    <div class="tile dark" id="Dental_Admission25" data-date="2025-02-28T10:00:00">
+      <h2>Dental Admission Exam!</h2>
+      <p><strong>Date:</strong> 28 February 2025</p>
+      <p><strong>Time:</strong> 10:00 AM to 11:00 AM</p>
+      <p><strong>Center:</strong> 78-Rajshahi Medical College,Dental-unit</p>
+      <div class="countdown dark" id="countdown4"></div>
+      <button class="download-btn" onclick="downloadTile('Dental_Admission25')"><i class="fas fa-download"></i></button>
+    </div>
+
+  <div class="tile dark" id="DU_B-Unit_Admission25" data-date="2025-01-25T11:00:00">
+    <h2>DU B-Unit Exam!</h2>
+    <p><strong>Date:</strong> 25 January 2025</p>
+    <p><strong>Time:</strong> 11:00 AM</p>
+    <p><strong>Center:</strong> Rajshshi</p>
+    <div class="countdown dark" id="countdown2"></div>
+    <button class="download-btn" onclick="downloadTile('DU_B-Unit_Admission25')"><i class="fas fa-download"></i></button>
+  </div>
+
+  <div class="tile dark" id="DU_A-Unit_Admission25" data-date="2025-02-15T11:00:00">
+    <h2>DU A-Unit Exam!</h2>
+    <p><strong>Date:</strong> 15 February 2025</p>
+    <p><strong>Time</strong> 11:00 AM</p>
+    <p><Strong>Center:</Strong> Rajshahi</p>
+    <div class="countdown dark" id="countdown3"></div>
+    <button class="download-btn" onclick="downloadTile('DU_A-Unit_Admission25')"><i class="fas fa-download"></i></button>
+  </div>
+</div>
+
+<div class="add-tile-btn" id="addTileBtn">
+    <i class="fas fa-add"></i>
+</div>
+
+<!--Load Floating Frm here -->
+<div id="Add-new"></div>
+
+<script src="style.js"></script>
+<script src="Add-nEw.js"></script>
+<script src="main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+</html>

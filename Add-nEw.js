@@ -13,7 +13,7 @@ const floatingFormHTML = `
       <label for="tileTime">Time:</label>
       <input type="time" id="tileTime" required>
       
-      <label for="tileCenter">Center:</label>
+      <label for="tileCenter">Center:(Optional)</label>
       <input type="text" id="tileCenter" placeholder="Exam Center">
       
       <button id="addTile"><i class="fas fa-plus-circle"></i> Add</button>

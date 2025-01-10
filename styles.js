@@ -43,7 +43,7 @@ style.innerHTML = `
   #date {
     font-family: "Spicy Rice", serif;
     font-weight: 400;
-    font-size: 2em;
+    font-size: 5vw;
     font-weight: 400;
     text-shadow: none;
     color: #1e90ff;
@@ -60,7 +60,7 @@ style.innerHTML = `
   #greeting {
     font-family: "Chakra Petch", serif;
     font-optical-sizing: auto;
-    font-size: 2em;
+    font-size: 3vw;
     font-weight: bold;
     text-align: center;
     color: #ffae00; 
